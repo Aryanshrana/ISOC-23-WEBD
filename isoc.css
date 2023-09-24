@@ -30,7 +30,8 @@ a {
 .main-nav {
     display: flex;
     margin-top: 15px;
-
+    
+  
 }
 
 .logo a,
@@ -51,13 +52,15 @@ a {
     color: #718daa;
 }
 
+
 .header {
     display: flex;
     padding-top: .5em;
     padding-bottom: .5em;
-    z-index: 1;
-    position: absolute;
-    background-color: none;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    background-color: black;
 }
 
 .language-option {
