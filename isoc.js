@@ -1,7 +1,21 @@
+const modeToggle = document.getElementById("mode-toggle");
+const body = document.body;
+
+modeToggle.addEventListener('click',()=>{
+  body.classList.toggle('dark-mode');
+  //remember the user preference
+  const isDarkmodeEnabled = body.classList.contains('dark-mode');
+  localStorage.setItem('darkMode',isDarkmodeEnabled);
+})
+const storedDarkMode = localStorage.getItem('darkMode');
+//Apply dark id user preference is stored
+if(storedDarkMode == true){
+  body.classList.add('dark-mode');
+}
+
 
 let navbarMenu = document.querySelector('.navbar-menu');
 let dropdownIsOpen = false;
-
 // Handle dropdown menu toggle
 navbarMenu.addEventListener('click', (event) => {
   if (event.target.classList.contains('dropdown-toggler')) {

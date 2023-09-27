@@ -62,6 +62,33 @@ a {
     top: 0;
     background-color: black;
 }
+/*variable for light mode*/
+:root {
+    --background-color-light: #ffffff;
+    --text-color-light: #000000;
+}
+/*variable for dark mode*/
+.dark-mode{
+    --background-color-dark: #121212;
+    --text-color-dark: #ffffff;
+}
+/*default add light mode styles*/
+body {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+/*apply dark mode styles when dark mode is applies*/
+body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+/*add styles for the mode toggle button*/
+#mode-toggle {
+    background-color: black ;
+    color: #34495e ;
+    border: none;
+    cursor: pointer;
+}
 
 .language-option {
     background-color: none;
@@ -158,6 +185,7 @@ h1 {
 
 /* current exhibitions */
 .ongoing-exhib,
+
 .our-gallery>p,
 .artisan-hub,
 .upcoming-exhib {
